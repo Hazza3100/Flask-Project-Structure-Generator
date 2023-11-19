@@ -10,7 +10,7 @@ def create_flask_project(project_name):
         },
         'server.py': [
             'from flask import Flask, render_template\n\n',
-            f'app = Flask(__name__)\n\n',
+            f'app = Flask(__name__, template_folder="templates")\n\n',
             f'@app.route("/")\n',
             f'def index():\n',
             f'    return render_template("index.html")\n\n',
